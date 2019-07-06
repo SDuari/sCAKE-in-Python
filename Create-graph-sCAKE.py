@@ -86,7 +86,7 @@ for every_file in (os.listdir(data_path)):
     print(every_file)
     
     with open(cwd+"/positions/"+file_name+".pkl", 'rb') as f:
-        df_pos = pd.read_pickle(f)
+        df_pos = pd.read_pickle(f, compression=None)
     
     text = read_text_from_file(data_path,every_file)
     text = re.sub(newline_ex, ' ', text)
