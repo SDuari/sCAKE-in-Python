@@ -41,7 +41,7 @@ for every_file in (os.listdir(data_path)):
     f_wordScore = read_text_from_file(cwd+"/SCScore/",file_name+".csv.sortedranked.IF.txt")
     
     with open(cwd+"/positions/"+file_name+".pkl", 'rb') as f:
-        df_pos = pd.read_pickle(f)
+        df_pos = pd.read_pickle(f, compression=None)
         
     df = pd.read_csv(word_score_path + file_name  +".csv.sortedranked.IF.txt")
     words = df["Name"]

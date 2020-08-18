@@ -62,7 +62,7 @@ for every_file in (os.listdir(data_path)):
     words = clean_text(text)
     
     pred_keys = list(score_df["Words"])
-    pred_keys = pred_keys[:len(pred_keys)/3]
+    pred_keys = pred_keys[:int(len(pred_keys)/3)]
     
     words = ["*" if word not in pred_keys else word for word in words]
     

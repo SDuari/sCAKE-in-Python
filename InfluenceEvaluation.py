@@ -175,7 +175,7 @@ def SortedRankedToFile(graphname, vnames,centrality, measurename):
        return
 
 
-def getInfluence(graphname) :
+def getInfluence(graphname):
        
        g = mysrcdir + '/' + graphname
        #print (g)
@@ -216,7 +216,7 @@ def getInfluence(graphname) :
 
 
 def getTopK(whichfile,k=10):
-    data = pandas.read_csv(whichfile)  
+    data = pd.read_csv(whichfile)  
     topk = data['Name'][:k]
     return topk
 
@@ -235,5 +235,5 @@ if __name__=='__main__':
     myfiles = os.listdir(mysrcdir)
     for f in myfiles:
         print(f)
-    	getInfluence(f)  
+        getInfluence(f)  
     
